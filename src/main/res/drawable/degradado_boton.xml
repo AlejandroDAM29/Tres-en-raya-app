@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Este es para el estado del botón una vez presionado-->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#CE0000"></solid>
+            <corners android:radius="@dimen/radio_boton"></corners>
+        </shape>
+    </item>
+
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="#FB1414"></solid>
+            <corners android:radius="@dimen/radio_boton"></corners>
+        </shape>
+    </item>
+
+<!--Este que no tiene etiqueta es para el estado en reposo-->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#F54A00"
+                android:endColor="#9F3E15"
+                android:angle="0"
+                ></gradient>
+            <corners android:radius="@dimen/radio_boton"></corners>
+        </shape>
+    </item>
+</selector>

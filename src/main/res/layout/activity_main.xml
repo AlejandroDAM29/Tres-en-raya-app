@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@drawable/degradado_fondo"
+    tools:context="raya.raya.raya.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/altura_layout_uno">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+
+                style="@style/titulo"
+                android:text="@string/app_name" />
+
+            <Button
+                android:id="@+id/unJugador"
+                style="@style/boton"
+                android:text="@string/un_jugador" />
+
+            <RadioGroup
+                android:id="@+id/configD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/facil"
+                    style="@style/radio"
+                    android:checked="true"
+                    android:text="@string/dificultad_facil" />
+
+                <RadioButton
+                    android:id="@+id/normal"
+                    style="@style/radio"
+                    android:text="@string/dificultad_normal" />
+
+                <RadioButton
+                    android:id="@+id/imposible"
+                    style="@style/radio"
+                    android:text="@string/dificultad_dificil" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/dos_jugadores"
+                style="@style/boton"
+                android:text="@string/dos_jugadores"></Button>
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <!--Para layout del tablero-->
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:columnCount="3"
+            app:rowCount="3">
+
+
+            <ImageView
+                android:id="@+id/a1"
+
+                style="@style/casilla"
+                android:scaleType="fitXY"></ImageView>
+
+            <ImageView
+                android:id="@+id/a2"
+                style="@style/casilla"
+                android:scaleType="fitXY"
+                android:src="@drawable/circulo"></ImageView>
+
+            <ImageView
+                android:id="@+id/a3"
+                style="@style/casilla"
+                android:scaleType="fitXY"
+                android:src="@drawable/aspa"></ImageView>
+
+            <ImageView
+                android:id="@+id/b1"
+                style="@style/casilla"
+                android:scaleType="fitXY"></ImageView>
+
+            <ImageView
+                android:id="@+id/b2"
+                style="@style/casilla"
+                android:scaleType="fitXY"
+                android:src="@drawable/circulo"></ImageView>
+
+            <ImageView
+                android:id="@+id/b3"
+                style="@style/casilla"
+                android:scaleType="fitXY"
+                android:src="@drawable/aspa"></ImageView>
+
+            <ImageView
+                android:id="@+id/c1"
+                style="@style/casilla"
+                android:scaleType="fitXY"
+                android:src="@drawable/aspa"></ImageView>
+
+            <ImageView
+                android:id="@+id/c2"
+                style="@style/casilla"
+                android:scaleType="fitXY"
+                android:src="@drawable/circulo"></ImageView>
+
+            <ImageView
+                android:id="@+id/c3"
+                style="@style/casilla"
+                android:scaleType="fitXY"></ImageView>
+
+        </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
+    <!--Layout de la publicidad-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Esto es para introducir el Banner-->
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5323698816824230/4911899768" />
+
+</RelativeLayout>
+
+
+</LinearLayout>
